@@ -1,0 +1,21 @@
+
+button{
+	margin: 5px;
+}
+
+#big-wrapper{
+	width: 1200px;
+}
+
+#search-bar{
+	float: right;
+	width: 120px;
+}
+
+#search-text{
+	font-weight: bold;
+}
+
+#submit-button{
+	margin-top: 5px;
+}
