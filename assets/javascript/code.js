@@ -2,6 +2,8 @@ var buttonsArray = ["fox", "tiger", "lion", "bear", "shark", "goat", "dog", "che
 var createButton;
 
 
+//create function that calls ajax and displays images
+
 function displayGiphy() {
 	var animal = $(this).attr("data-name");
 	var apiKey = "&api_key=dc6zaTOxFJmzC";
@@ -17,6 +19,11 @@ function displayGiphy() {
 
 	      var results = response.data;
 	      $('#gif-wrapper').empty();
+
+	    /*********************************************
+		loops through results and pulls the images and
+		data we need
+	    **********************************************/
 	      for (var i = 0; i < results.length; i++) {
 			var animalDiv = $("<div class='animals'>");
 			var rating = results[i].rating;
@@ -36,6 +43,10 @@ function displayGiphy() {
 
 			var state = $(this).attr("data-state");
 
+			/****************************************************
+			when the image is clicked change the attribute/source
+			*****************************************************/
+
 			 $(document).on("click","img", function() {
 				
 				$(this).attr("src", $(this).attr("data-animated"));
@@ -47,7 +58,9 @@ function displayGiphy() {
 	    });
 }
 
-
+/*************************************************
+create function that displays all buttons in array
+**************************************************/
 function displayButtons(){
 	$("#buttons-div").empty();
 	for(var i = 0; i < buttonsArray.length; i++){
@@ -61,6 +74,11 @@ function displayButtons(){
 }
 
 
+/*************************************************
+create on click function that adds the value the user
+types to the array and runs displayButtons function,
+clears the div so the buttons don't repeat
+**************************************************/
 $("#submit-button").on("click", function(event) {
 	event.preventDefault();
 	var animalSubmit = $("#animal-input").val().trim();
@@ -71,7 +89,10 @@ $("#submit-button").on("click", function(event) {
 
 
 
-
+/*************************************************
+on click function that displays gifs whenever the
+animalButton class is clicked on
+**************************************************/
 $(document).on("click", ".animalButton", displayGiphy);
 
 displayButtons();
