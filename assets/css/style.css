@@ -1,10 +1,15 @@
-
 button{
 	margin: 5px;
 }
 
 #big-wrapper{
+	margin-top: 10px;
 	width: 1200px;
+}
+
+#left-div{
+	float: left;
+	width: 800px;
 }
 
 #search-bar{
@@ -12,7 +17,7 @@ button{
 	width: 120px;
 }
 
-#search-text{
+p{
 	font-weight: bold;
 }
 
