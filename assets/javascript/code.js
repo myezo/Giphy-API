@@ -25,7 +25,7 @@ function displayGiphy() {
 		data we need
 	    **********************************************/
 	      for (var i = 0; i < results.length; i++) {
-			var animalDiv = $("<div class='animals'>");
+			var animalDiv = $("<div class='col-sm-3'>");
 			var rating = results[i].rating;
             // Creating a paragraph tag with the result item's rating
             var p = $("<p>").text("Rating: " + rating);

@@ -24,3 +24,14 @@ p{
 #submit-button{
 	margin-top: 5px;
 }
+
+#gif-wrapper{
+	width:1000px;
+	text-align: left;
+}
+
+#gif-wrapper img{
+	display: inline;
+	width: 230px;
+	height: 180px;
+}
